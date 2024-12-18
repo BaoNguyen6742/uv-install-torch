@@ -49,3 +49,55 @@
 
 - Now hopefully your environment are set and there is no problem. Run `uv run main.py` to check if you can import all package, there is no mismatch version of torch and all torch package use the CUDA version and your GPU is available.
 - If there are still some problems, run `uv pip uninstall torch torchvision torchaudio` then run `uv sync --extra cu124` again to reinstall torch and its package. The final result of `uv pip list` should only have torch, torchvision, torchaudio using cuda and other nvidia packages
+
+    ```txt
+    Package                  Version
+    ------------------------ ------------
+    contourpy                1.1.1
+    cycler                   0.12.1
+    filelock                 3.16.1
+    fonttools                4.55.3
+    fsspec                   2024.10.0
+    importlib-resources      6.4.5
+    jinja2                   3.1.4
+    joblib                   1.4.2
+    kiwisolver               1.4.7
+    markupsafe               2.1.5
+    matplotlib               3.7.5
+    mpmath                   1.3.0
+    networkx                 3.1
+    numpy                    1.24.4
+    nvidia-cublas-cu12       12.4.2.65
+    nvidia-cuda-cupti-cu12   12.4.99
+    nvidia-cuda-nvrtc-cu12   12.4.99
+    nvidia-cuda-runtime-cu12 12.4.99
+    nvidia-cudnn-cu12        9.1.0.70
+    nvidia-cufft-cu12        11.2.0.44
+    nvidia-curand-cu12       10.3.5.119
+    nvidia-cusolver-cu12     11.6.0.99
+    nvidia-cusparse-cu12     12.3.0.142
+    nvidia-nccl-cu12         2.20.5
+    nvidia-nvjitlink-cu12    12.4.99
+    nvidia-nvtx-cu12         12.4.99
+    opencv-python            4.10.0.84
+    packaging                24.2
+    pandas                   2.0.3
+    pillow                   10.4.0
+    pyparsing                3.1.4
+    python-dateutil          2.9.0.post0
+    pytz                     2024.2
+    scikit-learn             1.3.2
+    scipy                    1.10.1
+    seaborn                  0.13.2
+    six                      1.17.0
+    sympy                    1.13.3
+    threadpoolctl            3.5.0
+    torch                    2.4.1+cu124
+    torchaudio               2.4.1+cu124
+    torchvision              0.19.1+cu124
+    tqdm                     4.67.1
+    triton                   3.0.0
+    typing-extensions        4.12.2
+    tzdata                   2024.2
+    zipp                     3.20.2
+    ```
