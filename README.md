@@ -1,6 +1,6 @@
 # Disclaimer
 
-- At the point of writing this (18/12/2024), I'm using uv version **0.5.7**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (20/12/2024), I'm using uv version **0.5.11**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -25,7 +25,8 @@
     - `platform_system`: `platform.system()`
     - `sys_platform`: `sys.platform`
     - `os_name`: `os.name`
-
+    - Update
+        - [20/12/2024](https://github.com/astral-sh/uv/pull/9949):  `platform_system` and `sys_platform` are combined so you only need to declare `sys_platform`. If you want to be sure, you can still put both in your `pyproject.toml` file. The `uv.lock` file will resolve the condition and only have `sys_platform` in the final result. 
 - `uv venv`
 
 - activate your environment
@@ -36,12 +37,8 @@
 
 - `uv sync --extra cu124`
     - This only installs torch, torchvision, torchaudio with CUDA
-- `rm uv.lock`
-    - This will remove the lock file that is used to find the link to download pytorch
 - `uv add -r requirements.txt`
     - This will install the requirements and it will also take the currents version of torch, torchvision, torchaudio into consideration
-- `uv sync --extra cu124`
-    - This will install other nvidia packages like cublas, cudnn, typing-extensions, triton, ...that torch needed
 
 - If you still have some problem about torch, CUDA or the version of the package, try [clearing the cache](https://docs.astral.sh/uv/concepts/cache/#clearing-the-cache) by `uv cache clean` or `uv cache prune` or `uv cache clean torch` then run the command again from "Install torch". If there are still more problems, just delete the `uv.lock` file and `.venv` folder and run the command again from `uv venv`
 
@@ -57,7 +54,7 @@
     cycler                   0.12.1
     filelock                 3.16.1
     fonttools                4.55.3
-    fsspec                   2024.10.0
+    fsspec                   2024.12.0
     importlib-resources      6.4.5
     jinja2                   3.1.4
     joblib                   1.4.2
