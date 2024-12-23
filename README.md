@@ -44,7 +44,21 @@
 
 ## Run your script
 
-- Now hopefully your environment are set and there is no problem. Run `uv run main.py` to check if you can import all package, there is no mismatch version of torch and all torch package use the CUDA version and your GPU is available.
+- Now hopefully your environment are set and there is no problem. Run `uv run main.py` to check if you can import all package, there is no mismatch version of torch and all torch package use the CUDA version and your GPU is available. The output should be something like this, the device will be different based on your GPU.
+
+    ```txt
+    torch.__version__: 2.4.1+cu124
+    torchvision.__version__: 0.19.1+cu124
+    torchaudio.__version__: 2.4.1+cu124
+    torch.cuda.is_available: True
+
+    Device 0 : _CudaDeviceProperties(name='NVIDIA GeForce RTX 3060', major=8, minor=6, total_memory=11931MB, multi_processor_count=28)
+
+    Test calculation
+    tensor([[1, 2, 3],
+            [2, 4, 6]], device='cuda:0')
+    ```
+
 - If there are still some problems, run `uv pip uninstall torch torchvision torchaudio` then run `uv sync --extra cu124` again to reinstall torch and its package. The final result of `uv pip list` should only have torch, torchvision, torchaudio using cuda and other nvidia packages
 
     ```txt
