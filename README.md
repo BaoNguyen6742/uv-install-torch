@@ -1,6 +1,6 @@
 # Disclaimer
 
-- At the point of writing this (20/12/2024), I'm using uv version **0.5.11**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (27/12/2024), I'm using uv version **0.5.12**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -70,7 +70,7 @@
     fonttools                4.55.3
     fsspec                   2024.12.0
     importlib-resources      6.4.5
-    jinja2                   3.1.4
+    jinja2                   3.1.5
     joblib                   1.4.2
     kiwisolver               1.4.7
     markupsafe               2.1.5
