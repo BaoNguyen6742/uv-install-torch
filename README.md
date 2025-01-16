@@ -19,9 +19,9 @@
 - `uv init -p [your python version]`. Eg: `uv init -p 3.8`
 - `uv python pin [your python version]`. Eg: `uv python pin 3.8`
 
-- Setup torch source, extra flag, index,... using the [official uv website](https://docs.astral.sh/uv/guides/integration/pytorch/#configuring-accelerators-with-optional-dependencies). You can also check the Wayback Machine if you want to see how the installation has changed over time.
+- Setup torch source, extra flag, index,... in the `pyproject.toml` file using the [official uv website](https://docs.astral.sh/uv/guides/integration/pytorch/#configuring-accelerators-with-optional-dependencies) or you can just copy my config. You can also check the Wayback Machine if you want to see how the installation has changed over time.
 
-- If your code also doesn't need to run on multiple systems, you can also edit the `environment` in `[tool.uv]` to match what you want like in my file. Import `os`, `platform` and `sys` to get the information you need.
+- If your code also doesn't need to run on multiple systems, you can also edit the `environment` in `[tool.uv]` of the `pyproject.toml` file to match what you want like in my file. Import `os`, `platform` and `sys` to get the information you need.
     - `platform_system`: `platform.system()`
     - `sys_platform`: `sys.platform`
     - `os_name`: `os.name`
@@ -44,7 +44,7 @@
 
 ## Run your script
 
-- Now hopefully your environment are set and there is no problem. Run `uv run main.py` to check if you can import all package, there is no mismatch version of torch and all torch package use the CUDA version and your GPU is available. The output should be something like this, the device will be different based on your GPU.
+- Now hopefully your environment are set and there is no problem. Run `uv run main.py` to check if you can import all package, there is no mismatch version of torch, all torch package use the CUDA version and your GPU is available. The output should be something like this, the device, torch and CUDA version will be different based on your GPU and installation.
 
     ```txt
     torch.__version__: 2.4.1+cu124
@@ -59,7 +59,7 @@
             [2, 4, 6]], device='cuda:0')
     ```
 
-- If there are still some problems, run `uv pip uninstall torch torchvision torchaudio` then run `uv sync --extra cu124` again to reinstall torch and its package. The final result of `uv pip list` should only have torch, torchvision, torchaudio using cuda and other nvidia packages
+- If there are still some problems, run `uv pip uninstall torch torchvision torchaudio` then run `uv sync --extra cu124` again to reinstall torch and its package. The final result of `uv pip list` should only have torch, torchvision, torchaudio using cuda, other nvidia packages and the packages from `requirements.txt`. The output should be something like this, the version of the package will be different based on your installation.
 
     ```txt
     Package                  Version
