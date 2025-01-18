@@ -1,6 +1,6 @@
 # Disclaimer
 
-- At the point of writing this (16/01/2025), I'm using uv version **0.5.20**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (18/01/2025), I'm using uv version **0.5.21**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -90,7 +90,7 @@
     nvidia-nccl-cu12         2.20.5
     nvidia-nvjitlink-cu12    12.4.99
     nvidia-nvtx-cu12         12.4.99
-    opencv-python            4.10.0.84
+    opencv-python            4.11.0.86
     packaging                24.2
     pandas                   2.0.3
     pillow                   10.4.0
