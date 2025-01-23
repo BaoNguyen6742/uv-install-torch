@@ -1,6 +1,6 @@
 # Disclaimer
 
-- At the point of writing this (18/01/2025), I'm using uv version **0.5.21**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (23/01/2025), I'm using uv version **0.5.23**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -64,17 +64,10 @@
     ```txt
     Package                  Version
     ------------------------ ------------
-    contourpy                1.1.1
-    cycler                   0.12.1
     filelock                 3.16.1
-    fonttools                4.55.3
     fsspec                   2024.12.0
-    importlib-resources      6.4.5
     jinja2                   3.1.5
-    joblib                   1.4.2
-    kiwisolver               1.4.7
     markupsafe               2.1.5
-    matplotlib               3.7.5
     mpmath                   1.3.0
     networkx                 3.1
     numpy                    1.24.4
@@ -90,25 +83,12 @@
     nvidia-nccl-cu12         2.20.5
     nvidia-nvjitlink-cu12    12.4.99
     nvidia-nvtx-cu12         12.4.99
-    opencv-python            4.11.0.86
-    packaging                24.2
-    pandas                   2.0.3
     pillow                   10.4.0
-    pyparsing                3.1.4
-    python-dateutil          2.9.0.post0
-    pytz                     2024.2
-    scikit-learn             1.3.2
-    scipy                    1.10.1
-    seaborn                  0.13.2
-    six                      1.17.0
     sympy                    1.13.3
-    threadpoolctl            3.5.0
     torch                    2.4.1+cu124
     torchaudio               2.4.1+cu124
     torchvision              0.19.1+cu124
     tqdm                     4.67.1
     triton                   3.0.0
     typing-extensions        4.12.2
-    tzdata                   2024.2
-    zipp                     3.20.2
     ```
