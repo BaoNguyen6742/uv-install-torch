@@ -1,6 +1,6 @@
 # Disclaimer
 
-- At the point of writing this (23/01/2025), I'm using uv version **0.5.23**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (24/01/2025), I'm using uv version **0.5.24**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
