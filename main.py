@@ -4,7 +4,7 @@
 # import sklearn
 # import cv2
 # import PIL
-import tqdm
+# import tqdm
 # import seaborn
 # import scipy
 import torch

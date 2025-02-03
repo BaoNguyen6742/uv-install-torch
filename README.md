@@ -1,6 +1,6 @@
 # Disclaimer
 
-- At the point of writing this (24/01/2025), I'm using uv version **0.5.24**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (03/02/2025), I'm using uv version **0.5.26**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -65,7 +65,7 @@
     Package                  Version
     ------------------------ ------------
     filelock                 3.16.1
-    fsspec                   2024.12.0
+    fsspec                   2025.2.0
     jinja2                   3.1.5
     markupsafe               2.1.5
     mpmath                   1.3.0
@@ -88,7 +88,6 @@
     torch                    2.4.1+cu124
     torchaudio               2.4.1+cu124
     torchvision              0.19.1+cu124
-    tqdm                     4.67.1
     triton                   3.0.0
     typing-extensions        4.12.2
     ```

@@ -4,6 +4,6 @@
 # scikit-learn
 # opencv-python
 # Pillow
-tqdm
+# tqdm
 # seaborn
 # scipy
