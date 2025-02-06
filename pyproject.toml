@@ -1,11 +1,19 @@
-# Install with uv add -r requirements.txt --extra cu124
 [project]
 name = "uv-install-torch"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 dependencies = [
+    "matplotlib>=3.10.0",
+    "numpy>=2.2.2",
+    "opencv-python>=4.11.0.86",
+    "pandas>=2.2.3",
+    "pillow>=11.1.0",
+    "scikit-learn>=1.6.1",
+    "scipy>=1.15.1",
+    "seaborn>=0.13.2",
+    "tqdm>=4.67.1",
 ]
 
 [project.optional-dependencies]
@@ -21,7 +29,6 @@ cu124 = [
 ]
 
 
-# declare all extra tags
 [tool.uv]
 conflicts = [
   [
@@ -33,30 +40,26 @@ environments = [
   "sys_platform == 'linux' and os_name == 'posix'"
 ]
 
-
-# declare all index sources for each package for each extra tag
 [tool.uv.sources]
 torch = [
-  { index = "pytorch-cpu", extra = "cpu", marker = "platform_system != 'Darwin'"  },
+  { index = "pytorch-cpu", extra = "cpu"},
   { index = "pytorch-cu124", extra = "cu124"},
 ]
 torchvision = [
-  { index = "pytorch-cpu", extra = "cpu", marker = "platform_system != 'Darwin'"  },
+  { index = "pytorch-cpu", extra = "cpu"},
   { index = "pytorch-cu124", extra = "cu124"},
 ]
 torchaudio = [
-  { index = "pytorch-cpu", extra = "cpu" , marker = "platform_system != 'Darwin'" },
+  { index = "pytorch-cpu", extra = "cpu"},
   { index = "pytorch-cu124", extra = "cu124"},
 ]
 
 
-# declare an indexes
 [[tool.uv.index]]
 name = "pytorch-cpu"
 url = "https://download.pytorch.org/whl/cpu"
 explicit = true
 
-# declare another indexes
 [[tool.uv.index]]
 name = "pytorch-cu124"
 url = "https://download.pytorch.org/whl/cu124"

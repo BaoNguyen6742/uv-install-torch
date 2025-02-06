@@ -1,9 +1,9 @@
-# numpy
-# matplotlib
-# pandas
-# scikit-learn
-# opencv-python
-# Pillow
-# tqdm
-# seaborn
-# scipy
+numpy
+matplotlib
+pandas
+scikit-learn
+opencv-python
+Pillow
+tqdm
+seaborn
+scipy
