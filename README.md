@@ -1,6 +1,6 @@
 # Disclaimer
 
-- At the point of writing this (06/02/2025), I'm using uv version **0.5.29**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (11/02/2025), I'm using uv version **0.5.30**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -10,7 +10,7 @@
 - If you are not sure, you can also go to [torch](https://download.pytorch.org/whl/torch), [torchvision](https://download.pytorch.org/whl/torchvision) and [torchaudio](https://download.pytorch.org/whl/torchaudio) to find the appropriate version for your python and CUDA version. Search for `cp[your python version]-cp[your python version]`. 
     - Example: `cp310-cp310` for all torch that is compatible with python 3.10
     - Add `+cu[your cuda version]-` for torch that is compatible with CUDA.
-        - Example: `+cu124-cp38-cp38` for torch version that is compatible with python 3.8 and CUDA 12.4
+        - Example: `+cu124-cp310-cp310` for torch version that is compatible with python 3.10 and CUDA 12.4
 
 - For this setup, I'm using python 3.10, CUDA 12.4 and torch 2.4.1+cu124 on Ubuntu. Change your version accordingly.
 
@@ -76,7 +76,7 @@
     contourpy                1.3.1
     cycler                   0.12.1
     filelock                 3.17.0
-    fonttools                4.55.8
+    fonttools                4.56.0
     fsspec                   2025.2.0
     jinja2                   3.1.5
     joblib                   1.4.2
