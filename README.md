@@ -1,6 +1,6 @@
 # Disclaimer
 
-- At the point of writing this (13/02/2025), I'm using uv version **0.5.31**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (15/02/2025), I'm using uv version **0.6.0**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -47,7 +47,7 @@
 - Now hopefully your environment are set and there is no problem. Run `uv run main.py` to check if you can import all package, there is no mismatch version of torch, all torch package use the CUDA version and your GPU is available. The output should be something like this, the device, torch and CUDA version will be different based on your GPU and installation.
 
     ```txt
-    numpy.__version__: 2.2.2
+    numpy.__version__: 2.2.3
     matplotlib.__version__: 3.10.0
     pandas.__version__: 2.2.3
     sklearn.__version__: 1.6.1
@@ -85,7 +85,7 @@
     matplotlib               3.10.0
     mpmath                   1.3.0
     networkx                 3.4.2
-    numpy                    2.2.2
+    numpy                    2.2.3
     nvidia-cublas-cu12       12.4.2.65
     nvidia-cuda-cupti-cu12   12.4.99
     nvidia-cuda-nvrtc-cu12   12.4.99
