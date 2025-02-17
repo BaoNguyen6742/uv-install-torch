@@ -8,7 +8,4 @@ wheels/
 
 # Virtual environments
 .venv
-.markdownlint.json
 
-# Pyproject.toml default for torch
-pyproject.toml.default

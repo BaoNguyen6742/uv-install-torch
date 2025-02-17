@@ -55,7 +55,7 @@
     PIL.__version__: 11.1.0
     tqdm.__version__: 4.67.1
     seaborn.__version__: 0.13.2
-    scipy.__version__: 1.15.1
+    scipy.__version__: 1.15.2
     torch.__version__: 2.4.1+cu124
     torchvision.__version__: 0.19.1+cu124
     torchaudio.__version__: 2.4.1+cu124
@@ -106,7 +106,7 @@
     python-dateutil          2.9.0.post0
     pytz                     2025.1
     scikit-learn             1.6.1
-    scipy                    1.15.1
+    scipy                    1.15.2
     seaborn                  0.13.2
     six                      1.17.0
     sympy                    1.13.3
@@ -118,4 +118,5 @@
     triton                   3.0.0
     typing-extensions        4.12.2
     tzdata                   2025.1
+
     ```
