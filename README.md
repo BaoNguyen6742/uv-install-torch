@@ -1,25 +1,26 @@
 # Disclaimer
 
-- At the point of writing this (25/02/2025), I'm using uv version **0.6.3**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (04/03/2025), I'm using uv version **0.6.4**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
 - You must know what the python version you need to use to be compatible with all of your dependencies
-- After you know the python version, you must know that version of CUDA that you are using. and pick the appropriate one for torch.
-- After you know that version of python and cuda to use. go to [pytorch](https://pytorch.org/get-started/previous-versions/) to find which version of torch, torchvision and torchaudio to use.
-- If you are not sure, you can also go to [torch](https://download.pytorch.org/whl/torch), [torchvision](https://download.pytorch.org/whl/torchvision) and [torchaudio](https://download.pytorch.org/whl/torchaudio) to find the appropriate version for your python and CUDA version. Search for `cp[your python version]-cp[your python version]`. 
+- After you know the python version, you must know that version of CUDA that you want to use, this is not the CUDA version of your machine, I have CUDA 11.5 and I can still use torch with higher version of CUDA. When you install torch in python, it also download another version of cuDNN that fit the CUDA version you want to use to not interfere with the CUDA your machine use, like when you download torch using CUDA 12.4 it will also download cuDNN version 9.1.0.70. You can go to [Compatibility matrix](https://github.com/pytorch/pytorch/blob/main/RELEASE.md#release-compatibility-matrix) to see which pytorch version go with what python version using what CUDA version. I would suggest you use the highest stable CUDA version possible and go down from there if you have some problem.
+- After you know that version of python and CUDA to use. go to [pytorch](https://pytorch.org/get-started/previous-versions/) to find which version of torch to use.
+- If you are not sure or you want to verify that the combination of python, torch, CUDA version actually work you can also go to [torch](https://download.pytorch.org/whl/torch) to find the appropriate version for your python and CUDA version. Search for `cp[your python version]-cp[your python version]`. 
     - Example: `cp310-cp310` for all torch that is compatible with python 3.10
-    - Add `+cu[your cuda version]-` for torch that is compatible with CUDA.
+    - Add `+cu[your CUDA version]-` for torch that is compatible with CUDA.
         - Example: `+cu124-cp310-cp310` for torch version that is compatible with python 3.10 and CUDA 12.4
-
-- For this setup, I'm using python 3.10, CUDA 12.4 and torch 2.4.1+cu124 on Ubuntu. Change your version accordingly.
+- After you find your torch version, go to [torchvision](https://github.com/pytorch/pytorch/blob/main/RELEASE.md#release-compatibility-matrix) to find the appropriate version of torchvision that is compatible with your torch version if your need to use torchvision
+- After you find your torchvision version, go to [torchaudio](https://github.com/pytorch/audio/releases) to find the appropriate version of torchaudio that is compatible with your torch version if your need to use torchaudio. Usually torchaudio version is the same as torch version but you can check to be sure.
+- For this setup, I'm using python **3.10**, CUDA **12.4**, torch **2.4.1+cu124**, torchvision **0.19.1+cu124**, torchaudio **2.4.1+cu124** on Ubuntu. Change your version accordingly.
 
 # Setup
 
 - `uv init -p [your python version]`. Eg: `uv init -p 3.10`
 - `uv python pin [your python version]`. Eg: `uv python pin 3.10`
 
-- Setup torch source, extra flag, index,... in the `pyproject.toml` file using the [official uv website](https://docs.astral.sh/uv/guides/integration/pytorch/#configuring-accelerators-with-optional-dependencies) or you can just copy my config. You can also check the Wayback Machine if you want to see how the installation has changed over time.
+- Setup torch source, extra flag, index,... in the `pyproject.toml` file using the [official uv website](https://docs.astral.sh/uv/guides/integration/pytorch/#configuring-accelerators-with-optional-dependencies) or you can just copy my config. Remove all package in the `dependencies` section to only install torch first.
 
 - If your code also doesn't need to run on multiple systems, you can also edit the `environment` in `[tool.uv]` of the `pyproject.toml` file to match what you want like in my file. Import `os`, `platform` and `sys` to get the information you need.
     - `platform_system`: `platform.system()`
@@ -68,7 +69,7 @@
             [2, 4, 6]], device='cuda:0')
     ```
 
-- If there are still some problems, run `uv pip uninstall torch torchvision torchaudio` then run `uv sync --extra cu124` again to reinstall torch and its package. The final result of `uv pip list` should only have torch, torchvision, torchaudio using cuda, other nvidia packages and the packages from `requirements.txt`. The output should be something like this, the version of the package will be different based on your installation.
+- If there are still some problems, run `uv pip uninstall torch torchvision torchaudio` then run `uv sync --extra cu124` again to reinstall torch and its package. The final result of `uv pip list` should only have torch, torchvision, torchaudio using CUDA, other nvidia packages and the packages from `requirements.txt`. The output should be something like this, the version of the package will be different based on your installation.
 
     ```txt
     Package                  Version
@@ -82,7 +83,7 @@
     joblib                   1.4.2
     kiwisolver               1.4.8
     markupsafe               3.0.2
-    matplotlib               3.10.0
+    matplotlib               3.10.1
     mpmath                   1.3.0
     networkx                 3.4.2
     numpy                    2.2.3
