@@ -1,12 +1,12 @@
 # Disclaimer
 
-- At the point of writing this (04/03/2025), I'm using uv version **0.6.4**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (07/03/2025), I'm using uv version **0.6.5**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
 - You must know what the python version you need to use to be compatible with all of your dependencies
-- After you know the python version, you must know that version of CUDA that you want to use, this is not the CUDA version of your machine, I have CUDA 11.5 and I can still use torch with higher version of CUDA. When you install torch in python, it also download another version of cuDNN that fit the CUDA version you want to use to not interfere with the CUDA your machine use, like when you download torch using CUDA 12.4 it will also download cuDNN version 9.1.0.70. You can go to [Compatibility matrix](https://github.com/pytorch/pytorch/blob/main/RELEASE.md#release-compatibility-matrix) to see which pytorch version go with what python version using what CUDA version. I would suggest you use the highest stable CUDA version possible and go down from there if you have some problem.
-- After you know that version of python and CUDA to use. go to [pytorch](https://pytorch.org/get-started/previous-versions/) to find which version of torch to use.
+- After you know the python version, you must know that version of CUDA that you want to use, this is not the CUDA version of your machine, I have CUDA 11.5 and I can still use torch with higher version of CUDA. When you install torch in python, it also download another version of cuDNN that fit the CUDA version you want to use to not interfere with the CUDA your machine use, so when you download torch using CUDA 12.4 it will also download cuDNN version 9.1.0.70. You can go to [Compatibility matrix](https://github.com/pytorch/pytorch/blob/main/RELEASE.md#release-compatibility-matrix) to see which pytorch version go with what python version using what CUDA version. I would suggest you use the highest stable CUDA version possible and go down from there if you have some problem.
+- After you know that version of python and CUDA to use. go to [pytorch](https://pytorch.org/get-started/previous-versions/) to find which version of torch to use. The compatibility matrix also show the information about torch version that is compatible with a CUDA version but you can go to the pytorch website to be sure since it's definitely always up to date.
 - If you are not sure or you want to verify that the combination of python, torch, CUDA version actually work you can also go to [torch](https://download.pytorch.org/whl/torch) to find the appropriate version for your python and CUDA version. Search for `cp[your python version]-cp[your python version]`. 
     - Example: `cp310-cp310` for all torch that is compatible with python 3.10
     - Add `+cu[your CUDA version]-` for torch that is compatible with CUDA.
@@ -79,7 +79,7 @@
     filelock                 3.17.0
     fonttools                4.56.0
     fsspec                   2025.2.0
-    jinja2                   3.1.5
+    jinja2                   3.1.6
     joblib                   1.4.2
     kiwisolver               1.4.8
     markupsafe               3.0.2
