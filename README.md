@@ -1,18 +1,19 @@
 # Disclaimer
 
-- At the point of writing this (07/03/2025), I'm using uv version **0.6.5**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (12/03/2025), I'm using uv version **0.6.6**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
 - You must know what the python version you need to use to be compatible with all of your dependencies
-- After you know the python version, you must know that version of CUDA that you want to use, this is not the CUDA version of your machine, I have CUDA 11.5 and I can still use torch with higher version of CUDA. When you install torch in python, it also download another version of cuDNN that fit the CUDA version you want to use to not interfere with the CUDA your machine use, so when you download torch using CUDA 12.4 it will also download cuDNN version 9.1.0.70. You can go to [Compatibility matrix](https://github.com/pytorch/pytorch/blob/main/RELEASE.md#release-compatibility-matrix) to see which pytorch version go with what python version using what CUDA version. I would suggest you use the highest stable CUDA version possible and go down from there if you have some problem.
-- After you know that version of python and CUDA to use, you need to know the version of torch to use. The compatibility matrix shows the information about which torch version that is compatible with which CUDA version.
+- After you know the python version, you must know that version of CUDA that you want to use, this is not the CUDA version of your machine, I have CUDA 11.5 and I can still use torch with higher version of CUDA. When you install torch in python, it also download another version of cuDNN that fit the CUDA version you want to not interfere with the CUDA in your machine, so when you download torch using CUDA 12.4 it will also download cuDNN version 9.1.0.70, therefore you don't need to worry about CUDA or cuDNN in your machine. You can go to [Compatibility matrix](https://github.com/pytorch/pytorch/blob/main/RELEASE.md#release-compatibility-matrix) to see which pytorch version go with what python version using what CUDA version. I would suggest you use the highest stable CUDA version possible and go down from there if you have some problem.
+- After you know that version of python and CUDA to use, you need to know the version of torch to use. The compatibility matrix above also shows the information about which torch version that is compatible with which CUDA version.
 - If you are not sure or you want to verify that the combination of python, torch, CUDA version actually work you can also go to [torch](https://download.pytorch.org/whl/torch) to find the appropriate version for your python and CUDA version. Search for `cp[your python version]-cp[your python version]`. If the combination does exist then it is compatible. 
     - Example: `cp310-cp310` for all torch that is compatible with python 3.10
     - Add `+cu[your CUDA version]-` for torch that is compatible with CUDA.
         - Example: `+cu124-cp310-cp310` for torch version that is compatible with python 3.10 and CUDA 12.4
-- After you find your torch version, go to [torchvision and torchaudio compatibility](https://github.com/pytorch/pytorch/wiki/PyTorch-Versions) to find the compatible version of torchvision and torchaudio with your torch version. Although this doesn't show all minor version so if you want to select the minor version check the next step.
-- Go to [Previous verison](https://pytorch.org/get-started/previous-versions/) to find which minor version of torch, torchvision, torchaudio that you want to use. The minor version is the last number in the version. For example, if you want to use torch version 2.4.1, the minor version is 1. The minor version is not that important, but it is better to use the latest minor version to get the latest bug fix and improvement. This has all combination of torch, torchvision, torchaudio with CUDA version that compatible with each other and it's always the most up to date information.
+- After you find your torch version, if you need torchvision or torchaudio, go to [torchvision and torchaudio compatibility](https://github.com/pytorch/pytorch/wiki/PyTorch-Versions) to find the compatible version of torchvision and torchaudio with your torch version. Although this doesn't show all minor version so if you want to select the minor version check the next step.
+- Go to [Previous verison](https://pytorch.org/get-started/previous-versions/) to find which minor version of torch, torchvision, torchaudio that you want to use. The minor version is the last number in the version. For example, if you want to use torch version 2.4.1, the minor version is 1. The minor version is not that important, but it is better to use the latest minor version to get the latest bug fix and improvement. This has all combination of torch, torchvision, torchaudio with CUDA version that compatible with each other and it's always the most up to date information. Just scroll down until you find your torch version and select one that fit the CUDA version and the minor version that you want to use.
+- After you know all of the version that you want to use, you can start setting up your environment. 
 - For this setup, I'm using python **3.10**, CUDA **12.4**, torch **2.4.1+cu124**, torchvision **0.19.1+cu124**, torchaudio **2.4.1+cu124** on Ubuntu. Change your version accordingly.
 
 # Setup
@@ -49,7 +50,7 @@
 
     ```txt
     numpy.__version__: 2.2.3
-    matplotlib.__version__: 3.10.0
+    matplotlib.__version__: 3.10.1
     pandas.__version__: 2.2.3
     sklearn.__version__: 1.6.1
     cv2.__version__: 4.11.0
@@ -78,7 +79,7 @@
     cycler                   0.12.1
     filelock                 3.17.0
     fonttools                4.56.0
-    fsspec                   2025.2.0
+    fsspec                   2025.3.0
     jinja2                   3.1.6
     joblib                   1.4.2
     kiwisolver               1.4.8
