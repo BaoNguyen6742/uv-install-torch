@@ -1,6 +1,6 @@
 # Disclaimer
 
-- At the point of writing this (12/03/2025), I'm using uv version **0.6.6**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (18/03/2025), I'm using uv version **0.6.7**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -21,7 +21,9 @@
 - `uv init -p [your python version]`. Eg: `uv init -p 3.10`
 - `uv python pin [your python version]`. Eg: `uv python pin 3.10`
 
-- Setup torch source, extra flag, index,... in the `pyproject.toml` file using the [official uv website](https://docs.astral.sh/uv/guides/integration/pytorch/#configuring-accelerators-with-optional-dependencies) or you can just copy my config. Remove all package in the `dependencies` section to only install torch first.
+- Setup torch source, extra flag, index,... in the `pyproject.toml` file using the [official uv website](https://docs.astral.sh/uv/guides/integration/pytorch/#configuring-accelerators-with-optional-dependencies) or you can just copy [my config](pyproject.toml). Remove all package in the `dependencies` section to only install torch first.
+
+- Beside the config for torch in `pyproject.toml`, you also need to add torch to your `requirements.txt` file. You don't need to specify version or anything else for torch there since uv will follow the `pyproject.toml` file to install torch. 
 
 - If your code also doesn't need to run on multiple systems, you can also edit the `environment` in `[tool.uv]` of the `pyproject.toml` file to match what you want like in my file. Import `os`, `platform` and `sys` to get the information you need.
     - `platform_system`: `platform.system()`
@@ -35,21 +37,26 @@
 
 ## Install torch
 
-- Remove torch from your `requirements.txt` file, you only put torch in `pyproject.toml`
-
 - `uv sync --extra cu124`
     - This only installs torch, torchvision, torchaudio with CUDA
 - `uv add -r requirements.txt`
-    - This will install the requirements and it will also take the currents version of torch, torchvision, torchaudio into consideration
+    - This will install the requirements and it will also take the currents version of torch, torchvision, torchaudio into consideration.
 
-- If you still have some problem about torch, CUDA or the version of the package, try [clearing the cache](https://docs.astral.sh/uv/concepts/cache/#clearing-the-cache) by `uv cache clean` or `uv cache prune` or `uv cache clean torch` then run the command again from "Install torch". If there are still more problems, just delete the `uv.lock` file and `.venv` folder and run the command again from `uv venv`
+- If you still have some problem about torch, CUDA or the version of the package, try [clearing the cache](https://docs.astral.sh/uv/concepts/cache/#clearing-the-cache) by 
+    - `uv cache prune` (removes all unused cache)
+    - `uv cache clean torch` (removes all cache entries for the `torch` package)
+    - `uv cache clean` (removes all cache)
+
+    Starting from `uv cache prune`, if it fix your problem then you don't need to do the other 2, if not then move on to the next one.
+- Run the command again from "Install torch". 
+- If there are still more problems, just delete the `uv.lock` file and `.venv` folder and run the command again from `uv venv`
 
 ## Run your script
 
 - Now hopefully your environment are set and there is no problem. Run `uv run main.py` to check if you can import all package, there is no mismatch version of torch, all torch package use the CUDA version and your GPU is available. The output should be something like this, the device, torch and CUDA version will be different based on your GPU and installation.
 
     ```txt
-    numpy.__version__: 2.2.3
+    numpy.__version__: 2.2.4
     matplotlib.__version__: 3.10.1
     pandas.__version__: 2.2.3
     sklearn.__version__: 1.6.1
@@ -77,7 +84,7 @@
     ------------------------ ------------
     contourpy                1.3.1
     cycler                   0.12.1
-    filelock                 3.17.0
+    filelock                 3.18.0
     fonttools                4.56.0
     fsspec                   2025.3.0
     jinja2                   3.1.6
@@ -87,7 +94,7 @@
     matplotlib               3.10.1
     mpmath                   1.3.0
     networkx                 3.4.2
-    numpy                    2.2.3
+    numpy                    2.2.4
     nvidia-cublas-cu12       12.4.2.65
     nvidia-cuda-cupti-cu12   12.4.99
     nvidia-cuda-nvrtc-cu12   12.4.99
@@ -112,7 +119,7 @@
     seaborn                  0.13.2
     six                      1.17.0
     sympy                    1.13.3
-    threadpoolctl            3.5.0
+    threadpoolctl            3.6.0
     torch                    2.4.1+cu124
     torchaudio               2.4.1+cu124
     torchvision              0.19.1+cu124
