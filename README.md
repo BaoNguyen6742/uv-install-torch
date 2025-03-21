@@ -1,27 +1,53 @@
 # Disclaimer
 
-- At the point of writing this (19/03/2025), I'm using uv version **0.6.8**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (21/03/2025), I'm using uv version **0.6.9**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
-- You must know what the python version you need to use to be compatible with all of your dependencies
-- After you know the python version, you must know that version of CUDA that you want to use, this is not the CUDA version of your machine, I have CUDA 11.5 and I can still use torch with higher version of CUDA. When you install torch in python, it also download another version of cuDNN that fit the CUDA version you want to not interfere with the CUDA in your machine, so when you download torch using CUDA 12.4 it will also download cuDNN version 9.1.0.70, therefore you don't need to worry about CUDA or cuDNN in your machine. You can go to [Compatibility matrix](https://github.com/pytorch/pytorch/blob/main/RELEASE.md#release-compatibility-matrix) to see which pytorch version go with what python version using what CUDA version. I would suggest you use the highest stable CUDA version possible and go down from there if you have some problem.
-- After you know that version of python and CUDA to use, you need to know the version of torch to use. The compatibility matrix above also shows the information about which torch version that is compatible with which CUDA version.
-- If you are not sure or you want to verify that the combination of python, torch, CUDA version actually work you can also go to [torch](https://download.pytorch.org/whl/torch) to find the appropriate version for your python and CUDA version. Search for `cp[your python version]-cp[your python version]`. If the combination does exist then it is compatible. 
-    - Example: `cp310-cp310` for all torch that is compatible with python 3.10
-    - Add `+cu[your CUDA version]-` for torch that is compatible with CUDA.
-        - Example: `+cu124-cp310-cp310` for torch version that is compatible with python 3.10 and CUDA 12.4
-- After you find your torch version, if you need torchvision or torchaudio, go to [torchvision and torchaudio compatibility](https://github.com/pytorch/pytorch/wiki/PyTorch-Versions) to find the compatible version of torchvision and torchaudio with your torch version. Although this doesn't show all minor version so if you want to select the minor version check the next step.
-- Go to [Previous verison](https://pytorch.org/get-started/previous-versions/) to find which minor version of torch, torchvision, torchaudio that you want to use. The minor version is the last number in the version. For example, if you want to use torch version 2.4.1, the minor version is 1. The minor version is not that important, but it is better to use the latest minor version to get the latest bug fix and improvement. This has all combination of torch, torchvision, torchaudio with CUDA version that compatible with each other and it's always the most up to date information. Just scroll down until you find your torch version and select one that fit the CUDA version and the minor version that you want to use.
-- After you know all of the version that you want to use, you can start setting up your environment. 
-- For this setup, I'm using python **3.10**, CUDA **12.4**, torch **2.4.1+cu124**, torchvision **0.19.1+cu124**, torchaudio **2.4.1+cu124** on Ubuntu. Change your version accordingly.
+To install Pytorch abd run it with your GPU you must satisfy some GPU and software requirements.
+
+1. GPU requirements:
+    - At this step you don't need to install anything yet, just check if your hardware satisfy the requirement.
+
+    - Find CUDA version that your GPU support.
+        - Go to [GPUs supported](https://en.wikipedia.org/wiki/CUDA#Version_features_and_specifications) to find what version of CUDA that your GPU support.
+        - Find the columns of the code name for your GPU (RTX 30 series is Ampere, RTX 40 series is Ada Lovelace, RTX 50 series is Blackwell, ...)
+        - Find the CUDA version that go through the row of your GPU code name, it will be the CUDA version that your GPU support.
+        - If there are many CUDA version that your GPU support, I suggest you to choose the second highest version to get the latest feature while still being stable.
+        - Remember that CUDA version
+
+    - You must have a CUDA driver that is compatible with the CUDA version you want to use.
+        - Run `nvidia-smi --query-gpu driver_version --format csv` to get the driver version of your GPU.
+        - Go to [CUDA driver compatibility](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#id5) to find if your driver version is compatible with the CUDA version you want to use.
+        - If your driver is not compatible then you have 2 choice:
+            - Choose another CUDA version that is compatible with your driver.
+            - Update your driver to be compatible with the CUDA version you want to use.
+                - Go to [Nvidia driver](https://www.nvidia.com/en-us/drivers/), enter your GPU information and click find, then download the driver that is compatible with the CUDA version you want to use. I suggest you to use the highest version in the recommended driver section.
+2. Software requirements
+    - Select a Python version
+        - Go to [Compatibility matrix](https://github.com/pytorch/pytorch/blob/main/RELEASE.md#release-compatibility-matrix), check what Python version will be compatible with the CUDA version you want to use. CUDA is backward compatible so if you don't find the CUDA version that you want to use, find the CUDA version that is smaller and closest to the version you want to use and use that CUDA version.
+        
+    - After you know the version of python and CUDA to use, you need to know the version of torch to use. The compatibility matrix above also shows the information about which torch version that is compatible with which CUDA version.
+
+    - If you are not sure or you want to verify that the combination of python, torch, CUDA version actually work you can also go to [torch](https://download.pytorch.org/whl/torch) to find the appropriate version for your python and CUDA version. Search for `cp[your python version]-cp[your python version]`. If the combination does exist then it is compatible. 
+        - Example: `cp310-cp310` for all torch that is compatible with python 3.10
+        - Add `+cu[your CUDA version]-` for torch that is compatible with CUDA.
+            - Example: `+cu124-cp310-cp310` for torch version that is compatible with python 3.10 and CUDA 12.4
+
+    - After you find your torch version, if you need torchvision or torchaudio, go to [torchvision and torchaudio compatibility](https://github.com/pytorch/pytorch/wiki/PyTorch-Versions) to find the compatible version of torchvision and torchaudio with your torch version. Although this doesn't show all minor version so if you want to select the minor version check the next step.
+
+    - Go to [Previous version](https://pytorch.org/get-started/previous-versions/) to find which minor version of torch, torchvision, torchaudio that you want to use. The minor version is the last number in the version. For example, if you want to use torch version 2.4.1, the minor version is 1. The minor version is not that important, but it is better to use the latest minor version to get the latest bug fix and improvement. This has all combination of torch, torchvision, torchaudio with CUDA version that compatible with each other and it's always the most up to date information. Just scroll down until you find your torch version and select one that fit the CUDA version and the minor version that you want to use.
+
+    - After you know all of the version that you want to use, you can start setting up your environment. 
+
+    - For this setup, I'm using **NVIDIA GeForce RTX 3060**, CUDA **12.4**, Driver Version: **560.35.03**, Python **3.10**, torch **2.4.1**, torchvision **0.19.1**, torchaudio **2.4.1** on Ubuntu **22.04**. Change the version to match your hardware and software requirement.
 
 # Setup
 
 - `uv init -p [your python version]`. Eg: `uv init -p 3.10`
 - `uv python pin [your python version]`. Eg: `uv python pin 3.10`
 
-- Setup torch source, extra flag, index,... in the `pyproject.toml` file using the [official uv website](https://docs.astral.sh/uv/guides/integration/pytorch/#configuring-accelerators-with-optional-dependencies) or you can just copy [my config](pyproject.toml). Remove all package in the `dependencies` section to only install torch first.
+- Setup torch source, extra flag, index,... in the `pyproject.toml` file using the [official uv website](https://docs.astral.sh/uv/guides/integration/pytorch/#configuring-accelerators-with-optional-dependencies) or you can just copy [my config](pyproject.toml). Remove all package in the `dependencies` section to only install torch first and change `cu124` to your version of CUDA if you copy my config.
 
 - Beside the config for torch in `pyproject.toml`, you also need to add torch to your `requirements.txt` file. You don't need to specify version or anything else for torch there since uv will follow the `pyproject.toml` file to install torch. 
 
