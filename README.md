@@ -1,6 +1,6 @@
 # Disclaimer
 
-- At the point of writing this (21/03/2025), I'm using uv version **0.6.9**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (26/03/2025), I'm using uv version **0.6.10**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -137,9 +137,9 @@ To install Pytorch abd run it with your GPU you must satisfy some GPU and softwa
     packaging                24.2
     pandas                   2.2.3
     pillow                   11.1.0
-    pyparsing                3.2.1
+    pyparsing                3.2.3
     python-dateutil          2.9.0.post0
-    pytz                     2025.1
+    pytz                     2025.2
     scikit-learn             1.6.1
     scipy                    1.15.2
     seaborn                  0.13.2
@@ -152,5 +152,5 @@ To install Pytorch abd run it with your GPU you must satisfy some GPU and softwa
     tqdm                     4.67.1
     triton                   3.0.0
     typing-extensions        4.12.2
-    tzdata                   2025.1
+    tzdata                   2025.2
     ```
