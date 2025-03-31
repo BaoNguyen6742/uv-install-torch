@@ -1,6 +1,6 @@
 # Disclaimer
 
-- At the point of writing this (26/03/2025), I'm using uv version **0.6.10**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (31/03/2025), I'm using uv version **0.6.11**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -112,7 +112,7 @@ To install Pytorch abd run it with your GPU you must satisfy some GPU and softwa
     cycler                   0.12.1
     filelock                 3.18.0
     fonttools                4.56.0
-    fsspec                   2025.3.0
+    fsspec                   2025.3.1
     jinja2                   3.1.6
     joblib                   1.4.2
     kiwisolver               1.4.8
@@ -151,6 +151,6 @@ To install Pytorch abd run it with your GPU you must satisfy some GPU and softwa
     torchvision              0.19.1+cu124
     tqdm                     4.67.1
     triton                   3.0.0
-    typing-extensions        4.12.2
+    typing-extensions        4.13.0
     tzdata                   2025.2
     ```
