@@ -10,7 +10,7 @@ To install Pytorch abd run it with your GPU you must satisfy some GPU and softwa
     - At this step you don't need to install anything yet, just check if your hardware satisfy the requirement.
 
     - Find CUDA version that your GPU support.
-        - Go to [GPUs supported](https://en.wikipedia.org/wiki/CUDA#Version_features_and_specifications) to find what version of CUDA that your GPU support.
+        - Go to [GPUs supported](https://en.wikipedia.org/wiki/CUDA#GPUs_supported) to find what version of CUDA that your GPU support.
         - Find the columns of the code name for your GPU (RTX 30 series is Ampere, RTX 40 series is Ada Lovelace, RTX 50 series is Blackwell, ...)
         - Find the CUDA version that go through the row of your GPU code name, it will be the CUDA version that your GPU support.
         - If there are many CUDA version that your GPU support, I suggest you to choose the second highest version to get the latest feature while still being stable.
