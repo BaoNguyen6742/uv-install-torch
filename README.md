@@ -4,7 +4,7 @@
 
 # Preparation
 
-To install Pytorch abd run it with your GPU you must satisfy some GPU and software requirements.
+To install Pytorch and run it with your GPU you must satisfy some GPU and software requirements.
 
 1. GPU requirements:
     - At this step you don't need to install anything yet, just check if your hardware satisfy the requirement.
