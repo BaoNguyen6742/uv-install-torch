@@ -1,6 +1,7 @@
 torch
 numpy
 matplotlib
+matplotlib-inline
 pandas
 scikit-learn
 opencv-python

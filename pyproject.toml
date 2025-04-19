@@ -5,16 +5,17 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = [
-    "matplotlib>=3.10.1",
-    "numpy>=2.2.4",
-    "opencv-python>=4.11.0.86",
-    "pandas>=2.2.3",
-    "pillow>=11.1.0",
-    "scikit-learn>=1.6.1",
-    "scipy>=1.15.2",
-    "seaborn>=0.13.2",
-    "torch>=2.4.1",
-    "tqdm>=4.67.1",
+  "matplotlib>=3.10.1",
+  "matplotlib-inline>=0.1.7",
+  "numpy>=2.2.4",
+  "opencv-python>=4.11.0.86",
+  "pandas>=2.2.3",
+  "pillow>=11.1.0",
+  "scikit-learn>=1.6.1",
+  "scipy>=1.15.2",
+  "seaborn>=0.13.2",
+  "torch>=2.4.1",
+  "tqdm>=4.67.1",
 ]
 
 
@@ -29,7 +30,7 @@ cu124 = ["torch==2.4.1", "torchvision==0.19.1", "torchaudio==2.4.1"]
 conflicts = [[{ extra = "cpu" }, { extra = "cu124" }]]
 
 # The package is only installed on Linux systems
-environments = ["sys_platform == 'linux' and os_name == 'posix'"]
+# environments = ["sys_platform == 'linux' and os_name == 'posix'"]
 
 [tool.uv.sources]
 # The torch, torchvision, and torchaudio packages are installed from the pytorch-cpu and pytorch-cu124 indexes

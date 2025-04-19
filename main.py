@@ -1,31 +1,34 @@
-import numpy
-print("numpy.__version__:", numpy.__version__)
-import matplotlib
-print("matplotlib.__version__:", matplotlib.__version__)
-import pandas
-print("pandas.__version__:", pandas.__version__)
-import sklearn
-print("sklearn.__version__:", sklearn.__version__)
 import cv2
-print("cv2.__version__:", cv2.__version__)
+import matplotlib
+import numpy
+import pandas
 import PIL
-print("PIL.__version__:", PIL.__version__)
-import tqdm
-print("tqdm.__version__:", tqdm.__version__)
-import seaborn
-print("seaborn.__version__:", seaborn.__version__)
 import scipy
-print("scipy.__version__:", scipy.__version__)
+import seaborn
+import sklearn
 import torch
-import torchvision
 import torchaudio
+import torchvision
+import tqdm
 
-def basic_calculation(a:int, b:int) -> torch.Tensor:
-    device = "cuda"
-    tensor_a = torch.arange(start = 1, end = a+1).unsqueeze(0)
-    tensor_b = torch.arange(start=1, end = b+1).unsqueeze(0)
+print("cv2.__version__:", cv2.__version__)
+print("matplotlib.__version__:", matplotlib.__version__)
+print("numpy.__version__:", numpy.__version__)
+print("pandas.__version__:", pandas.__version__)
+print("PIL.__version__:", PIL.__version__)
+print("scipy.__version__:", scipy.__version__)
+print("seaborn.__version__:", seaborn.__version__)
+print("sklearn.__version__:", sklearn.__version__)
+print("tqdm.__version__:", tqdm.__version__)
+
+
+def basic_calculation(a: int, b: int) -> torch.Tensor:
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    tensor_a = torch.arange(start=1, end=a + 1).unsqueeze(0)
+    tensor_b = torch.arange(start=1, end=b + 1).unsqueeze(0)
     tensor_product = torch.matmul(tensor_a.T, tensor_b).to(device)
     return tensor_product
+
 
 print("torch.__version__:", torch.__version__)
 print("torchvision.__version__:", torchvision.__version__)

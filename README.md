@@ -26,10 +26,10 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
 2. Software requirements
     - Select a Python version
         - Go to [Compatibility matrix](https://github.com/pytorch/pytorch/blob/main/RELEASE.md#release-compatibility-matrix), check what Python version will be compatible with the CUDA version you want to use. CUDA is backward compatible so if you don't find the CUDA version that you want to use, find the CUDA version that is smaller and closest to the version you want to use and use that CUDA version.
-        
+
     - After you know the version of python and CUDA to use, you need to know the version of torch to use. The compatibility matrix above also shows the information about which torch version that is compatible with which CUDA version.
 
-    - If you are not sure or you want to verify that the combination of python, torch, CUDA version actually work you can also go to [torch](https://download.pytorch.org/whl/torch) to find the appropriate version for your python and CUDA version. Search for `cp[your python version]-cp[your python version]`. If the combination does exist then it is compatible. 
+    - If you are not sure or you want to verify that the combination of python, torch, CUDA version actually work you can also go to [torch](https://download.pytorch.org/whl/torch) to find the appropriate version for your python and CUDA version. Search for `cp[your python version]-cp[your python version]`. If the combination does exist then it is compatible.
         - Example: `cp310-cp310` for all torch that is compatible with python 3.10
         - Add `+cu[your CUDA version]-` for torch that is compatible with CUDA.
             - Example: `+cu124-cp310-cp310` for torch version that is compatible with python 3.10 and CUDA 12.4
@@ -38,25 +38,22 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
 
     - Go to [Previous version](https://pytorch.org/get-started/previous-versions/) to find which minor version of torch, torchvision, torchaudio that you want to use. The minor version is the last number in the version. For example, if you want to use torch version 2.4.1, the minor version is 1. The minor version is not that important, but it is better to use the latest minor version to get the latest bug fix and improvement. This has all combination of torch, torchvision, torchaudio with CUDA version that compatible with each other and it's always the most up to date information. Just scroll down until you find your torch version and select one that fit the CUDA version and the minor version that you want to use.
 
-    - After you know all of the version that you want to use, you can start setting up your environment. 
+    - After you know all of the version that you want to use, you can start setting up your environment.
 
     - For this setup, I'm using **NVIDIA GeForce RTX 3060**, CUDA **12.4**, Driver Version: **560.35.03**, Python **3.10**, torch **2.4.1**, torchvision **0.19.1**, torchaudio **2.4.1** on Ubuntu **22.04**. Change the version to match your hardware and software requirement.
 
 # Setup
 
-- `uv init -p [your python version]`. Eg: `uv init -p 3.10`
-- `uv python pin [your python version]`. Eg: `uv python pin 3.10`
+- Setup torch source, extra flag, index,... in the `pyproject.toml` file using the [official uv website](https://docs.astral.sh/uv/guides/integration/pytorch/#configuring-accelerators-with-optional-dependencies) or you can just copy [my config](pyproject.toml).
 
-- Setup torch source, extra flag, index,... in the `pyproject.toml` file using the [official uv website](https://docs.astral.sh/uv/guides/integration/pytorch/#configuring-accelerators-with-optional-dependencies) or you can just copy [my config](pyproject.toml). Remove all package in the `dependencies` section to only install torch first and change `cu124` to your version of CUDA if you copy my config.
-
-- Beside the config for torch in `pyproject.toml`, you also need to add torch to your `requirements.txt` file. You don't need to specify version or anything else for torch there since uv will follow the `pyproject.toml` file to install torch. 
+- Beside the config for torch in `pyproject.toml`, you also need to add torch to your `requirements.txt` file. You don't need to specify version or anything else for torch there since uv will follow the `pyproject.toml` file to install torch.
 
 - If your code also doesn't need to run on multiple systems, you can also edit the `environment` in `[tool.uv]` of the `pyproject.toml` file to match what you want like in my file. Import `os`, `platform` and `sys` to get the information you need.
     - `platform_system`: `platform.system()`
     - `sys_platform`: `sys.platform`
     - `os_name`: `os.name`
     - Update
-        - [20/12/2024](https://github.com/astral-sh/uv/pull/9949):  `platform_system` and `sys_platform` are combined so you only need to declare `sys_platform`. If you want to be sure, you can still put both in your `pyproject.toml` file. The `uv.lock` file will resolve the condition and only have `sys_platform` in the final result. 
+        - [20/12/2024](https://github.com/astral-sh/uv/pull/9949):  `platform_system` and `sys_platform` are combined so you only need to declare `sys_platform`. If you want to be sure, you can still put both in your `pyproject.toml` file. The `uv.lock` file will resolve the condition and only have `sys_platform` in the final result.
 - `uv venv`
 
 - activate your environment
@@ -64,17 +61,14 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
 ## Install torch
 
 - `uv sync --extra cu124`
-    - This only installs torch, torchvision, torchaudio with CUDA
-- `uv add -r requirements.txt`
-    - This will install the requirements and it will also take the currents version of torch, torchvision, torchaudio into consideration.
 
-- If you still have some problem about torch, CUDA or the version of the package, try [clearing the cache](https://docs.astral.sh/uv/concepts/cache/#clearing-the-cache) by 
+- If you still have some problem about torch, CUDA or the version of the package, try [clearing the cache](https://docs.astral.sh/uv/concepts/cache/#clearing-the-cache) by
     - `uv cache prune` (removes all unused cache)
     - `uv cache clean torch` (removes all cache entries for the `torch` package)
     - `uv cache clean` (removes all cache)
 
     Starting from `uv cache prune`, if it fix your problem then you don't need to do the other 2, if not then move on to the next one.
-- Run the command again from "Install torch". 
+- Run the command again from "Install torch".
 - If there are still more problems, just delete the `uv.lock` file and `.venv` folder and run the command again from `uv venv`
 
 ## Run your script
@@ -82,15 +76,15 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
 - Now hopefully your environment are set and there is no problem. Run `uv run main.py` to check if you can import all package, there is no mismatch version of torch, all torch package use the CUDA version and your GPU is available. The output should be something like this, the device, torch and CUDA version will be different based on your GPU and installation.
 
     ```txt
-    numpy.__version__: 2.2.4
-    matplotlib.__version__: 3.10.1
-    pandas.__version__: 2.2.3
-    sklearn.__version__: 1.6.1
     cv2.__version__: 4.11.0
-    PIL.__version__: 11.1.0
-    tqdm.__version__: 4.67.1
-    seaborn.__version__: 0.13.2
+    matplotlib.__version__: 3.10.1
+    numpy.__version__: 2.2.4
+    pandas.__version__: 2.2.3
+    PIL.__version__: 11.2.1
     scipy.__version__: 1.15.2
+    seaborn.__version__: 0.13.2
+    sklearn.__version__: 1.6.1
+    tqdm.__version__: 4.67.1
     torch.__version__: 2.4.1+cu124
     torchvision.__version__: 0.19.1+cu124
     torchaudio.__version__: 2.4.1+cu124
