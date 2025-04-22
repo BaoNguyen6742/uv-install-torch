@@ -66,7 +66,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
 
     Starting from `uv cache prune`, if it fix your problem then you don't need to do the other 2, if not then move on to the next one.
 - Run the command again from "Install torch".
-- If there are still more problems, just delete the `uv.lock` file and `.venv` folder and run the command again from `uv venv`
+- If there are still more problems, just delete the `uv.lock` file and `.venv` folder and run the command again
 
 ## Run your script
 
