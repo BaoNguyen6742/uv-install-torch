@@ -54,9 +54,6 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     - `os_name`: `os.name`
     - Update
         - [20/12/2024](https://github.com/astral-sh/uv/pull/9949):  `platform_system` and `sys_platform` are combined so you only need to declare `sys_platform`. If you want to be sure, you can still put both in your `pyproject.toml` file. The `uv.lock` file will resolve the condition and only have `sys_platform` in the final result.
-- `uv venv`
-
-- activate your environment
 
 ## Install torch
 
