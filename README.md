@@ -92,7 +92,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
             [2, 4, 6]], device='cuda:0')
     ```
 
-- If there are still some problems, run `uv pip uninstall torch torchvision torchaudio` then run `uv sync --extra cu124` again to reinstall torch and its package. The final result of `uv pip list` should only have torch, torchvision, torchaudio using CUDA, other nvidia packages and the packages from `requirements.txt`. The output should be something like this, the version of the package will be different based on your installation.
+- If there are still some problems, run `uv pip uninstall torch torchvision torchaudio` then run `uv sync --extra cu124` again to reinstall torch and its package. The final result of `uv pip list` should only have torch, torchvision, torchaudio using CUDA, other nvidia packages and the packages from `pyproject.toml`. The output should be something like this, the version of the package will be different based on your installation.
 
     ```txt
     Package                  Version
