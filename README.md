@@ -46,8 +46,6 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
 
 - Setup torch source, extra flag, index,... in the `pyproject.toml` file using the [official uv website](https://docs.astral.sh/uv/guides/integration/pytorch/#configuring-accelerators-with-optional-dependencies) or you can just copy [my config](pyproject.toml).
 
-- Beside the config for torch in `pyproject.toml`, you also need to add torch to your `requirements.txt` file. You don't need to specify version or anything else for torch there since uv will follow the `pyproject.toml` file to install torch.
-
 - If your code also doesn't need to run on multiple systems, you can also edit the `environment` in `[tool.uv]` of the `pyproject.toml` file to match what you want like in my file. Import `os`, `platform` and `sys` to get the information you need.
     - `platform_system`: `platform.system()`
     - `sys_platform`: `sys.platform`
