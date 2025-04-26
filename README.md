@@ -1,6 +1,6 @@
 # Disclaimer
 
-- At the point of writing this (22/04/2025), I'm using uv version **0.6.16**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (26/04/2025), I'm using uv version **0.6.17**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -73,7 +73,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     ```txt
     cv2.__version__: 4.11.0
     matplotlib.__version__: 3.10.1
-    numpy.__version__: 2.2.4
+    numpy.__version__: 2.2.5
     pandas.__version__: 2.2.3
     PIL.__version__: 11.2.1
     scipy.__version__: 1.15.2
@@ -97,7 +97,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     ```txt
     Package                  Version
     ------------------------ ------------
-    contourpy                1.3.1
+    contourpy                1.3.2
     cycler                   0.12.1
     filelock                 3.18.0
     fonttools                4.57.0
@@ -107,9 +107,10 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     kiwisolver               1.4.8
     markupsafe               3.0.2
     matplotlib               3.10.1
+    matplotlib-inline        0.1.7
     mpmath                   1.3.0
     networkx                 3.4.2
-    numpy                    2.2.4
+    numpy                    2.2.5
     nvidia-cublas-cu12       12.4.2.65
     nvidia-cuda-cupti-cu12   12.4.99
     nvidia-cuda-nvrtc-cu12   12.4.99
@@ -123,9 +124,9 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     nvidia-nvjitlink-cu12    12.4.99
     nvidia-nvtx-cu12         12.4.99
     opencv-python            4.11.0.86
-    packaging                24.2
+    packaging                25.0
     pandas                   2.2.3
-    pillow                   11.1.0
+    pillow                   11.2.1
     pyparsing                3.2.3
     python-dateutil          2.9.0.post0
     pytz                     2025.2
@@ -139,7 +140,8 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     torchaudio               2.4.1+cu124
     torchvision              0.19.1+cu124
     tqdm                     4.67.1
+    traitlets                5.14.3
     triton                   3.0.0
-    typing-extensions        4.13.1
+    typing-extensions        4.13.2
     tzdata                   2025.2
     ```
