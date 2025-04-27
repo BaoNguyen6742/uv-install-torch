@@ -1,3 +1,9 @@
+# Chat with this repo
+
+Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can understand the repo and chat with it using the link below:
+
+[Chat with this repo](https://deepwiki.com/BaoNguyen6742/uv-install-torch)
+
 # Disclaimer
 
 - At the point of writing this (26/04/2025), I'm using uv version **0.6.17**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
