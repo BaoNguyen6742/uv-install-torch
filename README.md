@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (30/04/2025), I'm using uv version **0.7.0**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (30/04/2025), I'm using uv version **0.7.1**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -140,7 +140,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     scipy                    1.15.2
     seaborn                  0.13.2
     six                      1.17.0
-    sympy                    1.13.3
+    sympy                    1.14.0
     threadpoolctl            3.6.0
     torch                    2.4.1+cu124
     torchaudio               2.4.1+cu124

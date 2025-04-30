@@ -104,7 +104,6 @@ try {
 
 }
 catch {
-    <#Do this if a terminating exception happens#>
     Write-Host "A terminating exception occurred: $_" -ForegroundColor Red
 }
 finally {
