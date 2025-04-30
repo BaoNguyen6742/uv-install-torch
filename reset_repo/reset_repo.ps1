@@ -5,17 +5,22 @@ param(
     [Alias("v")][switch]$verbose
 )
 
-$verbose_args = $verbose ? "--verbose" : "--quiet"
+$verbose_args = if ($verbose) {
+    "--verbose"
+}
+else {
+    "--quiet"
+}
 cls
 
 # Check uv version
-$uv_version = uv version 
+$uv_version = uv self version 
 # Update uv
 Write-Host "Updating uv..." -ForegroundColor Green
 & uv self update $verbose_args
 
 Write-Host
-$uv_update_version = uv version
+$uv_update_version = uv self version
 
 if (-not $forces -and $uv_version -eq $uv_update_version) {
     Write-Host "uv version was the same as before. Exiting." -ForegroundColor Yellow
@@ -80,7 +85,7 @@ catch {
 
 Write-Host
 cls
-uv version
+uv self version
 try {
     Write-Host "Running tests..." -ForegroundColor Green
     uv run main.py
