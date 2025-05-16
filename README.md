@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (08/05/2025), I'm using uv version **0.7.3**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (16/05/2025), I'm using uv version **0.7.4**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -78,18 +78,17 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
 
     ```txt
     cv2.__version__: 4.11.0
-    matplotlib.__version__: 3.10.1
+    matplotlib.__version__: 3.10.3
     numpy.__version__: 2.2.5
     pandas.__version__: 2.2.3
     PIL.__version__: 11.2.1
-    scipy.__version__: 1.15.2
+    scipy.__version__: 1.15.3
     seaborn.__version__: 0.13.2
     sklearn.__version__: 1.6.1
     tqdm.__version__: 4.67.1
     torch.__version__: 2.4.1+cu124
     torchvision.__version__: 0.19.1+cu124
     torchaudio.__version__: 2.4.1+cu124
-    torch.cuda.is_available: True
 
     Device 0 : _CudaDeviceProperties(name='NVIDIA GeForce RTX 3060', major=8, minor=6, total_memory=11931MB, multi_processor_count=28)
 
@@ -106,13 +105,13 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     contourpy                1.3.2
     cycler                   0.12.1
     filelock                 3.18.0
-    fonttools                4.57.0
+    fonttools                4.58.0
     fsspec                   2025.3.2
     jinja2                   3.1.6
     joblib                   1.5.0
     kiwisolver               1.4.8
     markupsafe               3.0.2
-    matplotlib               3.10.1
+    matplotlib               3.10.3
     matplotlib-inline        0.1.7
     mpmath                   1.3.0
     networkx                 3.4.2
@@ -137,7 +136,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     python-dateutil          2.9.0.post0
     pytz                     2025.2
     scikit-learn             1.6.1
-    scipy                    1.15.2
+    scipy                    1.15.3
     seaborn                  0.13.2
     six                      1.17.0
     sympy                    1.14.0
