@@ -89,6 +89,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     torch.__version__: 2.4.1+cu124
     torchvision.__version__: 0.19.1+cu124
     torchaudio.__version__: 2.4.1+cu124
+    torch.cuda.is_available: True
 
     Device 0 : _CudaDeviceProperties(name='NVIDIA GeForce RTX 3060', major=8, minor=6, total_memory=11931MB, multi_processor_count=28)
 
