@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (04/06/2025), I'm using uv version **0.7.10**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (05/06/2025), I'm using uv version **0.7.11**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -80,7 +80,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     cv2.__version__: 4.11.0
     matplotlib.__version__: 3.10.3
     numpy.__version__: 2.2.6
-    pandas.__version__: 2.2.3
+    pandas.__version__: 2.3.0
     PIL.__version__: 11.2.1
     scipy.__version__: 1.15.3
     seaborn.__version__: 0.13.2
@@ -131,7 +131,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     nvidia-nvtx-cu12         12.4.99
     opencv-python            4.11.0.86
     packaging                25.0
-    pandas                   2.2.3
+    pandas                   2.3.0
     pillow                   11.2.1
     pyparsing                3.2.3
     python-dateutil          2.9.0.post0
