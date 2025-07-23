@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (18/07/2025), I'm using uv version **0.8.0**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (23/07/2025), I'm using uv version **0.8.2**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
