@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (26/07/2025), I'm using uv version **0.8.3**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (04/08/2025), I'm using uv version **0.8.4**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -78,13 +78,13 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
 
     ```txt
     cv2.__version__: 4.11.0
-    matplotlib.__version__: 3.10.3
+    matplotlib.__version__: 3.10.5
     numpy.__version__: 2.2.6
     pandas.__version__: 2.3.1
     PIL.__version__: 11.3.0
     scipy.__version__: 1.15.3
     seaborn.__version__: 0.13.2
-    sklearn.__version__: 1.7.0
+    sklearn.__version__: 1.7.1
     tqdm.__version__: 4.67.1
     torch.__version__: 2.4.1+cu124
     torchvision.__version__: 0.19.1+cu124
@@ -112,7 +112,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     joblib                   1.5.1
     kiwisolver               1.4.8
     markupsafe               3.0.2
-    matplotlib               3.10.3
+    matplotlib               3.10.5
     matplotlib-inline        0.1.7
     mpmath                   1.3.0
     networkx                 3.4.2
