@@ -78,7 +78,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
 
     ```txt
     cv2.__version__: 4.11.0
-    matplotlib.__version__: 3.10.5
+    matplotlib.__version__: 3.10.6
     numpy.__version__: 2.2.6
     pandas.__version__: 2.3.2
     PIL.__version__: 11.3.0
@@ -106,13 +106,13 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     contourpy                1.3.2
     cycler                   0.12.1
     filelock                 3.19.1
-    fonttools                4.59.1
+    fonttools                4.59.2
     fsspec                   2025.7.0
     jinja2                   3.1.6
-    joblib                   1.5.1
+    joblib                   1.5.2
     kiwisolver               1.4.9
     markupsafe               3.0.2
-    matplotlib               3.10.5
+    matplotlib               3.10.6
     matplotlib-inline        0.1.7
     mpmath                   1.3.0
     networkx                 3.4.2
@@ -148,6 +148,6 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     tqdm                     4.67.1
     traitlets                5.14.3
     triton                   3.0.0
-    typing-extensions        4.14.1
+    typing-extensions        4.15.0
     tzdata                   2025.2
     ```
