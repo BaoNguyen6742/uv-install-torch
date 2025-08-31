@@ -24,7 +24,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
 
     - You must have a CUDA driver that is compatible with the CUDA version you want to use.
         - Run `nvidia-smi --query-gpu driver_version --format csv` to get the driver version of your GPU.
-        - Go to [CUDA driver compatibility](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#id6) to find if your driver version is compatible with the CUDA version you want to use.
+        - Go to [CUDA driver compatibility](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#id9) to find if your driver version is compatible with the CUDA version you want to use.
         - If your driver is not compatible then you have 2 choice:
             - Choose another CUDA version that is compatible with your driver.
             - Update your driver to be compatible with the CUDA version you want to use.
@@ -151,3 +151,4 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     typing-extensions        4.15.0
     tzdata                   2025.2
     ```
+
