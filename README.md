@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (04/09/2025), I'm using uv version **0.8.15**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (11/09/2025), I'm using uv version **0.8.17**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -84,7 +84,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     PIL.__version__: 11.3.0
     scipy.__version__: 1.15.3
     seaborn.__version__: 0.13.2
-    sklearn.__version__: 1.7.1
+    sklearn.__version__: 1.7.2
     tqdm.__version__: 4.67.1
     torch.__version__: 2.4.1+cu124
     torchvision.__version__: 0.19.1+cu124
@@ -136,7 +136,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     pyparsing                3.2.3
     python-dateutil          2.9.0.post0
     pytz                     2025.2
-    scikit-learn             1.7.1
+    scikit-learn             1.7.2
     scipy                    1.15.3
     seaborn                  0.13.2
     six                      1.17.0
