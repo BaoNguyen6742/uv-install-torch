@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (11/09/2025), I'm using uv version **0.8.17**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (18/09/2025), I'm using uv version **0.8.18**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -24,7 +24,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
 
     - You must have a CUDA driver that is compatible with the CUDA version you want to use.
         - Run `nvidia-smi --query-gpu driver_version --format csv` to get the driver version of your GPU.
-        - Go to [CUDA driver compatibility](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#id9) to find if your driver version is compatible with the CUDA version you want to use.
+        - Go to [CUDA driver compatibility](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#id6) to find if your driver version is compatible with the CUDA version you want to use.
         - If your driver is not compatible then you have 2 choice:
             - Choose another CUDA version that is compatible with your driver.
             - Update your driver to be compatible with the CUDA version you want to use.
@@ -106,7 +106,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     contourpy                1.3.2
     cycler                   0.12.1
     filelock                 3.19.1
-    fonttools                4.59.2
+    fonttools                4.60.0
     fsspec                   2025.9.0
     jinja2                   3.1.6
     joblib                   1.5.2
@@ -133,7 +133,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     packaging                25.0
     pandas                   2.3.2
     pillow                   11.3.0
-    pyparsing                3.2.3
+    pyparsing                3.2.4
     python-dateutil          2.9.0.post0
     pytz                     2025.2
     scikit-learn             1.7.2
