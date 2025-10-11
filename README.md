@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (08/10/2025), I'm using uv version **0.9.0**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (11/10/2025), I'm using uv version **0.9.2**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -78,7 +78,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
 
     ```txt
     cv2.__version__: 4.11.0
-    matplotlib.__version__: 3.10.6
+    matplotlib.__version__: 3.10.7
     numpy.__version__: 2.2.6
     pandas.__version__: 2.3.3
     PIL.__version__: 11.3.0
@@ -105,14 +105,14 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     ------------------------ ------------
     contourpy                1.3.2
     cycler                   0.12.1
-    filelock                 3.19.1
+    filelock                 3.20.0
     fonttools                4.60.1
     fsspec                   2025.9.0
     jinja2                   3.1.6
     joblib                   1.5.2
     kiwisolver               1.4.9
     markupsafe               3.0.3
-    matplotlib               3.10.6
+    matplotlib               3.10.7
     matplotlib-inline        0.1.7
     mpmath                   1.3.0
     networkx                 3.4.2
