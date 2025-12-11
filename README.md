@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (09/12/2025), I'm using uv version **0.9.16**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (11/12/2025), I'm using uv version **0.9.17**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -24,7 +24,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
 
     - You must have a CUDA driver that is compatible with the CUDA version you want to use.
         - Run `nvidia-smi --query-gpu driver_version --format csv` to get the driver version of your GPU.
-        - Go to [CUDA driver compatibility](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#id7) to find if your driver version is compatible with the CUDA version you want to use.
+        - Go to [CUDA driver compatibility](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#id8) to find if your driver version is compatible with the CUDA version you want to use.
         - If your driver is not compatible then you have 2 choice:
             - Choose another CUDA version that is compatible with your driver.
             - Update your driver to be compatible with the CUDA version you want to use.
@@ -78,7 +78,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
 
     ```txt
     cv2.__version__: 4.11.0
-    matplotlib.__version__: 3.10.7
+    matplotlib.__version__: 3.10.8
     numpy.__version__: 2.2.6
     pandas.__version__: 2.3.3
     PIL.__version__: 12.0.0
@@ -112,7 +112,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     joblib                   1.5.2
     kiwisolver               1.4.9
     markupsafe               3.0.3
-    matplotlib               3.10.7
+    matplotlib               3.10.8
     matplotlib-inline        0.2.1
     mpmath                   1.3.0
     networkx                 3.4.2
