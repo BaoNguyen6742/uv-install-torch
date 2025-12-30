@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (17/12/2025), I'm using uv version **0.9.18**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (30/12/2025), I'm using uv version **0.9.20**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -133,7 +133,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     packaging                25.0
     pandas                   2.3.3
     pillow                   12.0.0
-    pyparsing                3.2.5
+    pyparsing                3.3.1
     python-dateutil          2.9.0.post0
     pytz                     2025.2
     scikit-learn             1.7.2
