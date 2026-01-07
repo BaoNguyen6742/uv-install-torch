@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (30/12/2025), I'm using uv version **0.9.20**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (01/07/2026), I'm using uv version **0.9.22**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -19,7 +19,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
         - Go to [GPUs supported](https://en.wikipedia.org/wiki/CUDA#GPUs_supported) to find what version of CUDA that your GPU support.
         - Find the columns of the code name for your GPU (RTX 30 series is Ampere, RTX 40 series is Ada Lovelace, RTX 50 series is Blackwell, ...)
         - Find the CUDA version rows that go through the column of your GPU code name, it will be the CUDA version that your GPU support.
-        - If there are many CUDA version that your GPU support, I suggest you to choose the second highest version to get the latest feature while still being stable.`
+        - If there are many CUDA version that your GPU support, I suggest you to choose the second highest version to get the latest feature while still being stable.
         - Remember that CUDA version
 
     - You must have a CUDA driver that is compatible with the CUDA version you want to use.
@@ -81,7 +81,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     matplotlib.__version__: 3.10.8
     numpy.__version__: 2.2.6
     pandas.__version__: 2.3.3
-    PIL.__version__: 12.0.0
+    PIL.__version__: 12.1.0
     scipy.__version__: 1.15.3
     seaborn.__version__: 0.13.2
     sklearn.__version__: 1.7.2
@@ -105,7 +105,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     ------------------------ ------------
     contourpy                1.3.2
     cycler                   0.12.1
-    filelock                 3.20.1
+    filelock                 3.20.2
     fonttools                4.61.1
     fsspec                   2025.12.0
     jinja2                   3.1.6
@@ -132,7 +132,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     opencv-python            4.11.0.86
     packaging                25.0
     pandas                   2.3.3
-    pillow                   12.0.0
+    pillow                   12.1.0
     pyparsing                3.3.1
     python-dateutil          2.9.0.post0
     pytz                     2025.2
