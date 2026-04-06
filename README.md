@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (27/03/2026), I'm using uv version **0.11.2**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (06/04/2026), I'm using uv version **0.11.3**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -81,7 +81,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     matplotlib.__version__: 3.10.8
     numpy.__version__: 2.2.6
     pandas.__version__: 2.3.3
-    PIL.__version__: 12.1.1
+    PIL.__version__: 12.2.0
     scipy.__version__: 1.15.3
     seaborn.__version__: 0.13.2
     sklearn.__version__: 1.7.2
@@ -107,7 +107,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     cycler                   0.12.1
     filelock                 3.25.2
     fonttools                4.62.1
-    fsspec                   2026.2.0
+    fsspec                   2026.3.0
     jinja2                   3.1.6
     joblib                   1.5.3
     kiwisolver               1.5.0
@@ -132,7 +132,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     opencv-python            4.13.0.92
     packaging                26.0
     pandas                   2.3.3
-    pillow                   12.1.1
+    pillow                   12.2.0
     pyparsing                3.3.2
     python-dateutil          2.9.0.post0
     pytz                     2026.1.post1
@@ -149,5 +149,5 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     traitlets                5.14.3
     triton                   3.0.0
     typing-extensions        4.15.0
-    tzdata                   2025.3
+    tzdata                   2026.1
     ```
