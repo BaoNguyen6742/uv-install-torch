@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (06/05/2026), I'm using uv version **0.11.10**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (07/05/2026), I'm using uv version **0.11.11**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -146,7 +146,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     torchaudio               2.4.1+cu124
     torchvision              0.19.1+cu124
     tqdm                     4.67.3
-    traitlets                5.14.3
+    traitlets                5.15.0
     triton                   3.0.0
     typing-extensions        4.15.0
     tzdata                   2026.2
