@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (07/05/2026), I'm using uv version **0.11.11**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (11/05/2026), I'm using uv version **0.11.13**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -113,7 +113,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     kiwisolver               1.5.0
     markupsafe               3.0.3
     matplotlib               3.10.9
-    matplotlib-inline        0.2.1
+    matplotlib-inline        0.2.2
     mpmath                   1.3.0
     networkx                 3.4.2
     numpy                    2.2.6
