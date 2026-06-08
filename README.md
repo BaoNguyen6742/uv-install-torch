@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (03/06/2026), I'm using uv version **0.11.18**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (08/06/2026), I'm using uv version **0.11.19**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -24,7 +24,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
 
     - You must have a CUDA driver that is compatible with the CUDA version you want to use.
         - Run `nvidia-smi --query-gpu driver_version --format csv` to get the driver version of your GPU.
-        - Go to [CUDA driver compatibility](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/#id7) to find if your driver version is compatible with the CUDA version you want to use.
+        - Go to [CUDA driver compatibility](https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/#id8) to find if your driver version is compatible with the CUDA version you want to use.
         - If your driver is not compatible then you have 2 choice:
             - Choose another CUDA version that is compatible with your driver.
             - Update your driver to be compatible with the CUDA version you want to use.
@@ -85,7 +85,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     scipy.__version__: 1.15.3
     seaborn.__version__: 0.13.2
     sklearn.__version__: 1.7.2
-    tqdm.__version__: 4.67.3
+    tqdm.__version__: 4.68.1
     torch.__version__: 2.4.1+cu124
     torchvision.__version__: 0.19.1+cu124
     torchaudio.__version__: 2.4.1+cu124
@@ -105,7 +105,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     ------------------------ ------------
     contourpy                1.3.2
     cycler                   0.12.1
-    filelock                 3.29.0
+    filelock                 3.29.1
     fonttools                4.63.0
     fsspec                   2026.4.0
     jinja2                   3.1.6
@@ -145,8 +145,8 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     torch                    2.4.1+cu124
     torchaudio               2.4.1+cu124
     torchvision              0.19.1+cu124
-    tqdm                     4.67.3
-    traitlets                5.15.0
+    tqdm                     4.68.1
+    traitlets                5.15.1
     triton                   3.0.0
     typing-extensions        4.15.0
     tzdata                   2026.2
