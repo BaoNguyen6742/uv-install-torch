@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (08/06/2026), I'm using uv version **0.11.19**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (11/06/2026), I'm using uv version **0.11.20**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -85,7 +85,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     scipy.__version__: 1.15.3
     seaborn.__version__: 0.13.2
     sklearn.__version__: 1.7.2
-    tqdm.__version__: 4.68.1
+    tqdm.__version__: 4.68.2
     torch.__version__: 2.4.1+cu124
     torchvision.__version__: 0.19.1+cu124
     torchaudio.__version__: 2.4.1+cu124
@@ -105,7 +105,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     ------------------------ ------------
     contourpy                1.3.2
     cycler                   0.12.1
-    filelock                 3.29.1
+    filelock                 3.29.3
     fonttools                4.63.0
     fsspec                   2026.4.0
     jinja2                   3.1.6
@@ -145,7 +145,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     torch                    2.4.1+cu124
     torchaudio               2.4.1+cu124
     torchvision              0.19.1+cu124
-    tqdm                     4.68.1
+    tqdm                     4.68.2
     traitlets                5.15.1
     triton                   3.0.0
     typing-extensions        4.15.0
