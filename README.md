@@ -6,7 +6,7 @@ Thanks to the amazing people at [Deepwiki](https://deepwiki.com/), you can under
 
 # Disclaimer
 
-- At the point of writing this (03/08/2026), I'm using uv version **0.12.1**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
+- At the point of writing this (06/08/2026), I'm using uv version **0.12.2**, which may not be considered to be a stable release until 1.0 is reached. The installation and the command may change in the future. I will try to keep this as up to date as possible.
 
 # Preparation
 
@@ -130,7 +130,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     nvidia-nvjitlink-cu12    12.4.99
     nvidia-nvtx-cu12         12.4.99
     opencv-python            5.0.0.93
-    packaging                26.2
+    packaging                26.3
     pandas                   2.3.3
     pillow                   12.3.0
     pyparsing                3.3.2
@@ -146,7 +146,7 @@ To install Pytorch and run it with your GPU you must satisfy some GPU and softwa
     torchaudio               2.4.1+cu124
     torchvision              0.19.1+cu124
     tqdm                     4.70.0
-    traitlets                5.16.0
+    traitlets                5.16.1
     triton                   3.0.0
     typing-extensions        4.16.0
     tzdata                   2026.3
